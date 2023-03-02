@@ -42,7 +42,7 @@ After each one, lots of text will appear, dependencies will download and it will
 
 2. Navigate to cell-shape-analysis -> data -> src
 
-3. Download a dataset (e.g xxxxx) from (xxxxx) and copy the images and bounding boxes to into the folder “src”.
+3. Download the dataset (e.g. https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BIAD633). The data is divided into different experiments, to start, download the "PhIDDLI Primary Screen" study component and unzip both the .tif (image) files and .xml (bounding box) files into the folder “src”.
 
 4. Navigate back to cell-shape-analysis and open “List of commands.txt”. This contains all the steps that must be run in the PhIDDLI pipeline. Highlight all of it and copy it to the clipboard.
 
@@ -50,7 +50,7 @@ After each one, lots of text will appear, dependencies will download and it will
 
 > python3 scripts/visualize_embeddings.py data/plot.json
 
-6. Once complete, the analysed data in csv format can be found in cell-shape-analysis -> data as “export.csv”.
+6. Once complete, the analysed data in csv format can be found in cell-shape-analysis/data/ as “export.csv”.
 
 7. To interactively visualise the data, open the web browser and navigate to http://127.0.0.1:8050/. Note that it must be “http” not “https” otherwise it doesn’t load.
 
