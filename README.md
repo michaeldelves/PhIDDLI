@@ -1,6 +1,9 @@
 # PhIDDLI
 Phenotype Image Data and Digital Learning Innovation (PhIDDLI) for evaluating and visualising fluorescence microscopy cellular phenotypes
 
+09/10/2023 UPDATE - The manuscript is now accepted and online at PLoS Pathogens! https://doi.org/10.1371/journal.ppat.1011711
+Please note that the instructions below will generate the data used in the Biorxiv version. To meet reviewers comments for the final published version, different analysis settings were used. The new version will be up shortly (no different in base code, only parameters used).
+
 ## <B>Setting up PhIDDLI</B>
 
 If you are running Ubuntu in a virtual machine (if you are already running Ubuntu natively then skip 1-5):
