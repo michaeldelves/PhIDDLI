@@ -1,0 +1,19 @@
+python3 scripts/convert_raw.py --input-folder data/src/ --output-folder data/images/ --output-format jpg
+
+python3 scripts/extract_yolov5_bboxes.py --input-folder data/src/ --output-folder data/labels/
+
+python3 scripts/augment.py --image-input-folder data/images/ --labels-input-folder data/labels/ --image-output-folder data/augmented/images/ --labels-output-folder data/augmented/labels/ --image-extension jpg
+
+python3 scripts/extract_cells.py --labels-folder data/augmented/labels/ --images-folder data/augmented/images/ --output-folder data/augmented/extracted/
+
+python3 scripts/extract_embeddings.py --images data/augmented/extracted/*/*.jpg --output-file data/embeddings_aug_B1_primary.pkl
+
+python3 scripts/reduce_dimensionality.py data/embeddings_aug_B1_primary.pkl --output-file data/points_aug_B1_primary.pkl
+
+python3 scripts/compute_clusters_full.py data/embeddings_aug_B1_primary.pkl --output-file data/clusters_B1_aug_primary.pkl
+
+python3 scripts/export_data_csv.py --clusters data/clusters_B1_aug_primary.pkl --points data/points_aug_B1_primary.pkl --output-file data/export.csv
+
+python3 scripts/prepare_plot.py --points data/points_aug_B7_primary.pkl --clusters data/clusters_B7_aug_primary.pkl --output-file data/plot.json --limit-images 20000
+
+python3 scripts/visualize_embeddings.py data/plot.json
