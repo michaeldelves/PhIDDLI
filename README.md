@@ -1,8 +1,8 @@
 # PhIDDLI
 Phenotype Image Data and Digital Learning Innovation (PhIDDLI) for evaluating and visualising fluorescence microscopy cellular phenotypes
 
-09/10/2023 UPDATE - The manuscript is now accepted and online at PLoS Pathogens! https://doi.org/10.1371/journal.ppat.1011711
-Please note that the instructions below will generate the data used in the Biorxiv version. To meet reviewers comments for the final published version, different analysis settings were used. The new version will be up shortly (no difference in base code, only parameters used).
+<B>09/10/2023 UPDATE - The manuscript is now accepted and online at PLoS Pathogens! https://doi.org/10.1371/journal.ppat.1011711
+To run the dataset with the setting used in the PLoS Pathogens manuscript use "PP List of commands augment.txt", the only difference between this and the original Bioxriv version "List of commands.txt" is that now, each image is augmented in eight different orientations to boost the dataset, and the final k-means clustering setting have been changed so that cluster assignment binning to multiples of 5 has been removed.</B>
 
 ## <B>Setting up PhIDDLI</B>
 
@@ -47,7 +47,7 @@ After each one, lots of text will appear, dependencies will download and it will
 
 3. Download the dataset (e.g. https://www.ebi.ac.uk/biostudies/bioimages/studies/S-BIAD633). The data is divided into different experiments, to start, download the "PhIDDLI Primary Screen" study component and unzip both the .tif (image) files and .xml (bounding box) files into the folder “src”.
 
-4. Navigate back to cell-shape-analysis and open “List of commands.txt”. This contains all the steps that must be run in the PhIDDLI pipeline. Highlight all of it and copy it to the clipboard.
+4. Navigate back to cell-shape-analysis and open “PP List of commands augment.txt”. This contains all the steps that must be run in the PhIDDLI pipeline. Highlight all of it and copy it to the clipboard.
 
 5. Open a terminal window in cell-shape-analysis. Right mouse button and paste the text in. PhIDDLI should start running immediately, but may need the user to press ENTER at the end to execute the final step. Each step must be executed in order, but once executed, data is saved and subsequent steps can be executed at a later time. For example, once the entire set of commands have been executed, all calculations are complete and data can be visualised directly at any later point by just running the last command:
 
