@@ -1,3 +1,5 @@
+ulimit -s unlimited
+
 python3 scripts/convert_raw.py --input-folder data/src/ --output-folder data/images/ --output-format jpg
 
 python3 scripts/extract_yolov5_bboxes.py --input-folder data/src/ --output-folder data/labels/
